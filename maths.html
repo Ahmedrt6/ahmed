@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>maths</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link href="styles.css" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            let button = document.querySelector("button");
+            button.addEventListener("click", function(){
+            var value = document.querySelector("input").value;
+            p = document.querySelector("#p1");
+            p.innerHTML = "";
+            if (/^\d+$/.test(value)) // Checks if the value is integer
+            {
+                if (value.length === 3){
+                    if (value[1] === "5"){
+                        let valueS = value;
+                        value = Math.round(value);
+                        let X = Number(valueS[0]);
+                        let Y = Number(valueS[2]);
+
+                        var w = (X*10 + 5) * (X*10 + 5);
+                        var z = (Y * (2* (X-1) + 3));
+                        var h = 100 * ((X*10 + 5) * (X*10 + 5) + (Y * (2* (X-1) + 3)));
+                        y2 = Y * Y;
+                        k = 100 * ((X*10 + 5) * (X*10 + 5) + (Y * (2* (X-1) + 3))) + Y * Y;
+p.innerHTML = "100 * ((X5) ^ 2 + Y * (2 * (X - 1) + 3)) + Y ^ 2 <br>100 * ((" + X + "5) ^ 2 + " + Y + " * (2 * (" + X + " - 1) + 3)) + " + Y + " ^ 2" + "<br>100 * (" + w + " + " + z + " ) + " + y2 + "<br>" + h + " + " + y2 + "= <br>" + k;
+                    }
+                    else {
+                        alert("the middle term should be equal to 5");
+                    }
+                }
+                else {
+                    alert("You should put a 3 digit number");
+                }
+            }
+            else {
+                alert("you should put integers only");
+            }
+        })
+    })
+    </script>
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border">
+            <ul class="navbar-nav mr-auto mt-2">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="me.html">My life</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="maths.html">Maths</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="football.html">Football</a>
+              </li>
+            </ul>
+
+          </nav>
+        <header>
+            <h1>maths</h1>
+        </header>
+        <main class="container p-2"><div>
+            <p class="p1">I love maths and I found a trick calculation and here is it<br>
+                (X5Y)^(2)= 100 * ((X5) ^ 2 + Y * (2 * (X - 1) + 3)) + Y ^ 2 <br>
+                where X5Y is a 3 digit number and X5 is a 2 digit number <br>
+                now try to square any 3 digit number on calculator and then plugin the numbers in the formula above.<br>
+                and to calculate '(X5) ^ 2' easily you can search on the internet on how to square a 2 digit number where units is equal to 5.<br>
+                I know that this trick was found before I discover it but I have known this after I discovered it and I was amazed that i discovered it.
+            </p>
+        </div>
+        <table class="table table-striped-columns table-dark table-hover">
+            <thead>
+                <th>X5Y</th>
+                <th>squared</th>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>151</td>
+                    <td>22801</td>
+                </tr>
+                <tr>
+                    <td>152</td>
+                    <td>23104</td>
+                </tr>
+            <tr>
+                <td>153</td>
+                <td>23409</td>
+            </tr>
+            <tr>
+                <td>551</td>
+                <td>33601</td>
+            </tr>
+            <tr>
+                <td>657</td>
+                <td>431649</td>
+            </tr>
+        </tbody>
+        </table>
+        <p>now try to put the numbers by yourself in the next section</p>
+        <input type="text"><button>click</button>
+        <p id="p1" class="p1" style="text-indent:0px;"></p>
+        <!-- this next penguin is not my code it just looks good so i copied it -->
+        <div class="penguin">
+            <div class="penguin-bottom">
+                <div class="right-hand"></div>
+                <div class="left-hand"></div>
+                <div class="right-feet"></div>
+                <div class="left-feet"></div>
+            </div>
+            <div class="penguin-top">
+                <div class="right-cheek"></div>
+                <div class="left-cheek"></div>
+                <div class="belly"></div>
+                <div class="right-eye">
+                <div class="sparkle"></div>
+                </div>
+                <div class="left-eye">
+                <div class="sparkle"></div>
+                </div>
+                <div class="blush-right"></div>
+                <div class="blush-left"></div>
+                <div class="beak-top"></div>
+                <div class="beak-bottom"></div>
+            </div>
+            </div>
+            <!-- here the penguin code ends -->
+        </main>
+            <footer><a href="me.html">previous</a>
+            <a href="football.html">next</a></footer>
+    </body>
+</html>
